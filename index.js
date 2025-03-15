@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
+    
     // Désactiver les boutons "site-mzl"
     document.querySelectorAll(".site-mzl").forEach(button => {
         button.addEventListener("click", () => {
@@ -186,4 +186,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
