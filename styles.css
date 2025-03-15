@@ -97,23 +97,57 @@ input:hover {
 
 /* Profil agrandi */
 
-.profile {
-    padding-top: 5px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.profile-pic {
-    display: block !important; /* S'assurer que l'image est visible */
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+/* Header */
+
+
+/* Profil dans le header */
+.profile-container {
     position: absolute;
     top: 10px;
     right: 10px;
 }
+
+.profile-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 3px solid white; /* Ajuster l'épaisseur si nécessaire */
+    transition: transform 0.3s ease-in-out;
+    margin-left: 10px;
+
+    /* Supprimer le padding qui crée un écart */
+    padding: 0;
+
+    /* S'assurer que l'image est bien centrée */
+    display: block;
+}
+.profile {
+    position: absolute;
+    top: 10px; /* Ajuste la hauteur pour ne pas chevaucher la barre */
+    right: 10px; /* Ajuste pour bien aligner à droite */
+    width: 50px; /* Taille réduite pour mobile */
+    height: 50px;
+}
+
+/* 🔹 Ajustement pour les petits écrans */
+@media (max-width: 600px) { 
+    .profile {
+        top: 5px; /* Ajuste l’espace en haut */
+        right: 7px; /* Place l’image encore plus à droite */
+        width: 10px; /* Réduit encore un peu la taille */
+        height: 10px;
+    }
+}
+
+
+/* Effet au survol */
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+
 
 /* Section de bienvenue */
 .welcome {
